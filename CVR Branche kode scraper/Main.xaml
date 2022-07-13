@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1220,4543" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1220,4706" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="80">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -79,7 +79,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="746,4378" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="819,4501" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="localPath" />
       <Variable x:TypeArguments="sd:DataTable" Name="KundeListe" />
@@ -94,7 +94,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="704,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="777,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -108,13 +108,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="704,4146" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[localPath+&quot;ECIT Group\ECIT Services Danmark - Dokumenter\RPA\Projekt mapper\Hvidvask kontrol\Branche liste.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="777,4269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[localPath+&quot;ECIT Group\ECIT Services Danmark - Dokumenter\RPA\Projekt mapper\Hvidvask kontrol\Branche liste.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670,4037" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="743,4160" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dtOwnerComplete" />
             </Sequence.Variables>
@@ -123,23 +123,23 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[KundeListe]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="KundeListe">
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[KundeListe]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="701,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="KundeListe">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
                 </InArgument>
               </ui:ExcelReadRange.Range>
             </ui:ExcelReadRange>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtOwnerComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1:E1" SheetName="OwnerList" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtRealOwnerComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1:E1" SheetName="RealOwnerList" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtDirektionComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="A1:F1" SheetName="LeaderShip" />
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ny fane" sap:VirtualizedContainerService.HintSize="628,3041" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtOwnerComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="701,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1:E1" SheetName="OwnerList" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtRealOwnerComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="701,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1:E1" SheetName="RealOwnerList" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtDirektionComplete]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="701,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="A1:F1" SheetName="LeaderShip" />
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ny fane" sap:VirtualizedContainerService.HintSize="701,3164" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,2824" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="667,2948" sap2010:WorkflowViewState.IdRef="Sequence_1">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="index" />
                     </Sequence.Variables>
@@ -148,13 +148,13 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[KundeListe]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="552,2730" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[KundeListe]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625,2854" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,2613" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="591,2738" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="branche" />
                               <Variable x:TypeArguments="x:String" Name="formål" />
@@ -166,26 +166,26 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="476,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="cvr.dk" Version="V1" />
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT forside-soegefelt…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="476,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Text="[CurrentRow(&quot;CVR&quot;).ToString]" Version="V1">
+                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="549,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="cvr.dk" Version="V1" />
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT forside-soegefelt…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="549,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Text="[CurrentRow(&quot;CVR&quot;).ToString]" Version="V1">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://datacvr.virk.dk/" DesignTimeRectangle="576, 454, 698, 60" ElementType="InputBox" FriendlyName="'INPUT forside-soegefelt…'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-input' aaname='' /&gt;" Guid="3250f9cf-0dfc-402c-8f4d-8747ea0bcac1" ImageBase64="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" InformativeScreenshot="cb7dbbbcc97e1e9f7caa2165cd25698f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Søg i CVR' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                               </uix:NTypeInto.Target>
                             </uix:NTypeInto>
-                            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="476,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="549,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://datacvr.virk.dk/" DesignTimeRectangle="1274, 454, 70, 60" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='BUTTON' type='button' class='button button-unstyled search-btn' aaname='' /&gt;" Guid="5f210731-3a1a-46ba-ba33-3582036b408f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAABACAYAAAC9S+EXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVHhe7ZyxSgNBEIbzBPoG+gT6Br6BPoBopaXaWmhjq602CtZaKhaKFiEonIWIEBELCwURRCwSSL3mT9y4OefOUe92z/Mf+EjgZgP7MTvZPbirGIYqKEoZlWq1asgHtVrN1Ot102w23xV1g6JScGX1RLVaLdKm0WiYKIo6TlBZNihKALLgBMvQBkUlYL3YoKgEKEoJRSmhKCUUpYSilFCUEopSQlFKKEpJIUXtnt2b5Z3rPqLbZzHXF4UR9fTS6AgZnD00lckDkeGFE7N1cieOz5tCiEK1QIIkR2Ji7bwjVvqtvAguCpLiVTS2cmqW2tV1dPnYWYZz21dmaL5f5Ohi1ausoKIwUbeSIANypFywunfbJ2t640LMy4OgolA1riRNhUCkKytNbJYEFTUw87HkvjNhV/D4aiTmZE0wUeg9drLoSVJOEqg8OxZIOVkTTJRbFfgu5aQBuXa8j+VXCFE/mejU+sX/E4VlKOWkgd7070RhnyTlpDHS3kfZ8T6ON8FEYXJ2othLSTlJ3Dy89sbin1PKyZpgooC728ZmUsqRcBs5epWUkzVBRW0e3/UmDDS9xm3iqCZUl5SXNUFFAbcpA9xBkHboEDK2ctaX+50q/C3BRUGK25gtkIKzHO4U4AAcvw5wbW3fj6zgogBkuUsqDSw3VJJbiT4Ox4UQZUGPii9FCwRBpu1Jvu8kFEqUC6RZkvZJ8SrMU1ZhRWnxJevPiwI+ZJVCFMhbVmlEgbisn5whkyiVKGBl4V8yy8Ny6UQBVFLWdxRKKSoPKEoJRSmhKCUUpYSilFCUEopSQlFKKEoJRSmhKCUUpYSilFCUEopSwIevFXz5OD/5jPiCCNIl8ZUj75+ML4KiVGHMG+NHN7MBbmCYAAAAAElFTkSuQmCC" InformativeScreenshot="4f2c8158222faef01df833548aeb068c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Søg i CVR' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Ejerforhold'" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Ejerforhold'" sap:VirtualizedContainerService.HintSize="549,22" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="763,1348" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="476,685" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtOwner]" DisplayName="Extract Table Data - Owner" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OwnerShare'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtOwner]" DisplayName="Extract Table Data - Owner" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OwnerShare'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                                     <uix:NExtractData.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="432, 484, 710, 400" FriendlyName="'Legale ejereHANS''" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='accordion-ejerforhold-content' tag='DIV' /&gt;" Guid="94910961-4be8-4342-9e21-95af5552d5be" InformativeScreenshot="f279ec069532d3b710cd5bbeeaf6d7a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enhedsvisning' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                     </uix:NExtractData.Target>
@@ -196,9 +196,9 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NExtractData>
-                                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company" DataTable="[dtOwner]" DefaultValue="[CurrentRow(&quot;Kunde&quot;)]" DisplayName="Add Company" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
-                                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtOwner]" DefaultValue="[CurrentRow(&quot;CVR&quot;)]" DisplayName="Add CompanyCvr" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtOwner]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company" DataTable="[dtOwner]" DefaultValue="[CurrentRow(&quot;Kunde&quot;)]" DisplayName="Add Company" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+                                  <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtOwner]" DefaultValue="[CurrentRow(&quot;CVR&quot;)]" DisplayName="Add CompanyCvr" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtOwner]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
@@ -221,9 +221,9 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:ForEachRow>
-                                  <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company" DataTable="[dtOwner]" DisplayName="Remove Company" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3" />
-                                  <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtOwner]" DisplayName="Remove CompanyCvr" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4" />
-                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtRealOwner]" DisplayName="Extract Table Data - RealOwner" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OwnerShare'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                                  <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company" DataTable="[dtOwner]" DisplayName="Remove Company" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3" />
+                                  <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtOwner]" DisplayName="Remove CompanyCvr" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4" />
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtRealOwner]" DisplayName="Extract Table Data - RealOwner" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OwnerShare'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="721,156" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                                     <uix:NExtractData.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="376, 872, 768, 1000" FriendlyName="'Legale ejereB.O.J.HOLDI…'" FullSelectorArgument="&lt;webctrl id='accordion-ejerforhold-content' tag='DIV' /&gt;" Guid="0351226f-1116-4cd2-8870-f9762896143b" InformativeScreenshot="c54b355215632fdf2c7f6e19047f8ed8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enhedsvisning' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                     </uix:NExtractData.Target>
@@ -234,7 +234,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NExtractData>
-                                  <If Condition="[dtRealOwner.RowCount = 0]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <If Condition="[dtRealOwner.RowCount = 0]" sap:VirtualizedContainerService.HintSize="721,22" sap2010:WorkflowViewState.IdRef="If_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -296,7 +296,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
-                            <Sequence DisplayName="DirektionData" sap:VirtualizedContainerService.HintSize="476,1357" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="DirektionData" sap:VirtualizedContainerService.HintSize="549,1486" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="sd:DataTable" Name="dtDirektionName" />
                               </Sequence.Variables>
@@ -306,33 +306,38 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtDirektion]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Rolle'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Info'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='0'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NExtractData_5" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtDirektion]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Rolle'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Info'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='0'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="507,156" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                                 <uix:NExtractData.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="432, -721, 710, 1444" FriendlyName="'TegningsregelSelskabet …'" FullSelectorArgument="&lt;webctrl parentid='accordion-personkreds-content' tag='DIV' /&gt;" Guid="d400bc04-19eb-4af0-8c46-84a6d6b26274" InformativeScreenshot="9538263be542d41597b33fe54556bc9d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enhedsvisning' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                 </uix:NExtractData.Target>
                               </uix:NExtractData>
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtDirektionName]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NExtractData_6" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtDirektionName]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="507,156" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
                                 <uix:NExtractData.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="432, -421, 710, 1400" FriendlyName="'TegningsregelSelskabet …'" FullSelectorArgument="&lt;webctrl parentid='accordion-personkreds-content' tag='DIV' /&gt;" Guid="0dc6dc1e-2f53-4411-aabe-91d325eecf47" InformativeScreenshot="d219082b5739600a7d17b03802e78b14.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enhedsvisning' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                 </uix:NExtractData.Target>
                               </uix:NExtractData>
-                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.Item(&quot;Kunde&quot;)]" DisplayName="Add Company" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
-                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add CompanyCvr" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8" />
-                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Name" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add Name" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9" />
-                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Address" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add Address" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_10" />
-                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[indexDirektion]" DataTable="[dtDirektion]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,497" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Name" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add Name" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9" />
+                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Address" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add Address" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_10" />
+                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.Item(&quot;Kunde&quot;)]" DisplayName="Add Company" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
+                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtDirektion]" DefaultValue="[CurrentRow.item(&quot;CVR&quot;)]" DisplayName="Add CompanyCvr" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8" />
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[indexDirektion]" DataTable="[dtDirektion]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="507,628" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRowDirektion" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,380" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="473,512" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:Int32" Name="length" />
+                                        <Variable x:TypeArguments="x:Int32" Name="lastIndex" />
+                                        <Variable x:TypeArguments="x:String" Name="Name" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[dtDirektion.rows(indexDirektion).item(&quot;Rolle&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="If_2">
+                                      <If Condition="[dtDirektion.rows(indexDirektion).item(&quot;Rolle&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="If_2">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -357,7 +362,7 @@
                                           </Sequence>
                                         </If.Then>
                                       </If>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Object">[dtDirektion.Rows(indexDirektion).Item("Name")]</OutArgument>
                                         </Assign.To>
@@ -365,20 +370,50 @@
                                           <InArgument x:TypeArguments="x:String">[dtDirektionName.rows(indexDirektion).Item("Name").ToString]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Object">[dtDirektion.Rows(indexDirektion).Item("Address")]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:String">[dtDirektion.Rows(indexDirektion).item("Info").ToString.Substring(dtDirektion.Rows(indexDirektion).Item("Info").ToString.LastIndexOf(dtDirektionName.Rows(indexDirektion).Item("Name").tostring))]</InArgument>
-                                        </Assign.Value>
-                                      </Assign>
-                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[dtDirektion.Rows(indexDirektion).ItemArray]" DataTable="[dtDirektionComplete]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                        <ui:MultipleAssign.AssignOperations>
+                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[length]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[dtDirektionName.rows(indexDirektion).item("Name").ToString.Length]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[Name]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[dtDirektionName.rows(indexDirektion).item("Name").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[lastIndex]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[dtDirektion.rows(indexDirektion).item("Info").ToString.LastIndexOf(Name)+length-1]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:Object">[dtDirektion.Rows(indexDirektion).Item("Address")]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:Object">[dtDirektion.Rows(indexDirektion).item("Info").ToString.Substring(lastIndex,length)]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                          </scg:List>
+                                        </ui:MultipleAssign.AssignOperations>
+                                      </ui:MultipleAssign>
+                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[dtDirektion.Rows(indexDirektion).ItemArray]" DataTable="[dtDirektionComplete]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:ForEachRow.Body>
                               </ui:ForEachRow>
-                              <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company" DataTable="[dtDirektion]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_7" />
+                              <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company" DataTable="[dtDirektion]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_7" />
                               <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CompanyCvr" DataTable="[dtDirektion]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_8" />
                             </Sequence>
                             <uix:NExtractData AppendResults="False" ContinueOnError="False" DataTable="[cvrDkInfo]" DelayBefore="2" DisplayName="Extract Table Data- Branche" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Data'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="476,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="404ffbb5-4fa3-4d1e-b288-a55961063b23" Version="V1">
